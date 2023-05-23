@@ -1,0 +1,25 @@
+
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_inventory_record"
+        android:title="盤點紀錄" />
+
+    <item
+        android:id="@+id/navigation_inventory_work"
+
+        android:title="盤點作業" />
+
+    <item
+        android:id="@+id/navigation_income_work"
+        android:title="收入作業" />
+
+    <item
+        android:id="@+id/navigation_expense_work"
+        android:title="支出作業" />
+
+    <item
+        android:id="@+id/navigation_light_guide"
+        android:title="亮燈指引" />
+</menu>
