@@ -7,28 +7,26 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="111dp"
-        android:layout_height="37dp"
-        android:text="藥庫盤點系統"
+        android:layout_width="118dp"
+        android:layout_height="41dp"
+        android:text="@string/System_name"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnLogOut"
         android:layout_width="94dp"
         android:layout_height="48dp"
         android:text="登出"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.908"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -38,9 +36,7 @@
         android:contextClickable="false"
         android:textAlignment="center"
 
-        app:itemTextAppearanceActive="@color/white"
-        app:itemTextColor="@color/white"
-        app:backgroundTint="@color/black"
+
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -50,17 +46,16 @@
 
 
     <FrameLayout
-
-        android:layout_width="350dp"
-        android:layout_height="570dp"
-        android:layout_marginTop="46dp"
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogOut"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/nav_view"
+        app:layout_constraintVertical_bias="0.0">
 
     </FrameLayout>
 

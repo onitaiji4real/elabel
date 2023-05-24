@@ -24,6 +24,7 @@ import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -87,9 +88,8 @@ public class Login extends AppCompatActivity {
                 users.add(user);
             }
             reader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (CsvValidationException e) {
+        } catch (IOException | CsvValidationException e) {
+            // 處理 I/O 相關異常或 CSV 驗證異常的程式碼
             e.printStackTrace();
         }
     }

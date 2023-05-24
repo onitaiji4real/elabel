@@ -2,4 +2,15 @@
     <string name="app_name">elabel</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="System_name">百國藥庫盤點系統</string>
+
+    <string name="Area_STR">儲位:</string>
+    <string name="dgCode_STR">藥物代碼:</string>
+    <string name="dgName_STR">藥物名稱:</string>
+
+    <string name="Area">DST-0</string>
+    <string name="dgCode">1AZ</string>
+    <string name="dgName">安寶定</string>
+
+
 </resources>
