@@ -8,6 +8,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Environment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -101,6 +103,25 @@ public class fr_b_operation extends Fragment {
 
         return view;
     }
+    private void afterScan() {
+        labelCode.addTextChangedListener(new TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}//以上不用
+            @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}//以上不用
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+                String input = s.toString();
+                if(input.length() == 12){
+                    //使用者Scan完條碼
+                    // 偵測到12個字元後自動執行代出資料
+                }
+            }
+        });
+    }
+
+
+
 
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -193,8 +214,8 @@ public class fr_b_operation extends Fragment {
                 Druginfo druginfo = new Druginfo();
                 druginfo.setMakerID(record[0]);
                 druginfo.setDrugCode(record[1]);
-                druginfo.setDrugEnglish(record[2]);
-                druginfo.setDrugName(record[3]);
+                druginfo.setDrugName(record[2]);
+                druginfo.setDrugEnglish(record[3]);
                 druginfo.setDrugLabel(record[10]);
                 Druginfos.add(druginfo);
             }

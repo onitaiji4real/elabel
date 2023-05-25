@@ -37,7 +37,7 @@ public class FragmentActivity extends AppCompatActivity {
         bottomNavigationView = findViewById(R.id.nav_view);
         bottomNavigationView.setSelectedItemId(R.id.navigation_inventory_work);
 
-        Fragment startFragment = new fr_a_record();
+        Fragment startFragment = new fr_b_operation();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_container, startFragment);
         transaction.commit();
