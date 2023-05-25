@@ -20,6 +20,7 @@ import data.GlobalData;
 public class FragmentActivity extends AppCompatActivity {
 
     Button btnLogOut;
+
     GlobalData globalData;
     List<Drugstore> Drugstores;
     BottomNavigationView bottomNavigationView;
@@ -28,15 +29,17 @@ public class FragmentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity);
 
+        globalData = (GlobalData) getApplicationContext();
+
         btnLogOut = findViewById(R.id.btnLogOut);
         btnLogOut.setOnClickListener(onLogout);
 
         bottomNavigationView = findViewById(R.id.nav_view);
         bottomNavigationView.setSelectedItemId(R.id.navigation_inventory_work);
 
-        Fragment fragment = new fr_b_operation();
+        Fragment startFragment = new fr_a_record();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment_container, fragment);
+        transaction.replace(R.id.fragment_container, startFragment);
         transaction.commit();
 
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
