@@ -73,6 +73,8 @@ public class fr_b_operation extends Fragment {
         drugCode = view.findViewById(R.id.drugCode);//儲位代碼
         drugName = view.findViewById(R.id.drugName);//藥物名稱
 
+        String ABC = "ABD";
+
         stockBox = view.findViewById(R.id.stockBox);//盒
         stockLine = view.findViewById(R.id.stockLine);//排
         stockNumPill = view.findViewById(R.id.stockNumPill);//顆
