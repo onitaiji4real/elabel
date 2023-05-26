@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.media.AudioManager;
+import android.media.ToneGenerator;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -141,6 +143,7 @@ public class Login extends AppCompatActivity {
             if (loginResult.isEmpty()) {
                 String successMessage = globalData.getLoginUserID() + " " + globalData.getLoginUserName() + " 登入成功";
                 Toast.makeText(Login.this, successMessage, Toast.LENGTH_LONG).show();
+
                 startActivity(new Intent(v.getContext(), FragmentActivity.class));
 
 
